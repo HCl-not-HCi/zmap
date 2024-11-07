@@ -395,7 +395,7 @@ int recv_update_stats(void)
 		return EXIT_FAILURE;
 	}
 	if (need_recv_counter) {
-		zrecv.pcap_recv = (uint32_t)recv_counter;
+		zrecv.pcap_recv = recv_counter;
 	}
 	return EXIT_SUCCESS;
 }
