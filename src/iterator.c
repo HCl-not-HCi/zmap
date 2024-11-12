@@ -82,7 +82,7 @@ iterator_t *iterator_init(uint8_t num_threads, uint16_t shard,
 		  group_min_size);
 	iterator_t *it = xmalloc(sizeof(struct iterator));
 	const cyclic_group_t *group = get_group(group_min_size);
-	log_debug("cyclic_group", "prime: %lu; ", zsend.max_index);
+	log_debug("cyclic_group", "prime: %lu; ", group->prime);
 	if (num_addrs > (1LL << 32)) {
 		zsend.max_index = 0xFFFFFFFF;
 	} else {
