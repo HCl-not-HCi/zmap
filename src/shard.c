@@ -132,7 +132,7 @@ void shard_init(shard_t *shard, uint16_t shard_idx, uint16_t num_shards,
 	// blocklist, find the first element that is.
 	shard_roll_to_valid(shard);
 
-	log_debug("shard_init", "shard_idx: %hu; thread_idx: %hhu; first: %llu; last: %llu",
+	log_debug("shard_init", "shard_idx: %hu; thread_idx: %hhu; first: %lu; last: %lu",
 		  shard_idx, thread_idx, shard->params.first, shard->params.last);
 
 	// Clear everything

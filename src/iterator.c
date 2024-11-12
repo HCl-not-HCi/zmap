@@ -71,17 +71,18 @@ iterator_t *iterator_init(uint8_t num_threads, uint16_t shard,
 			  uint32_t num_ports)
 {
 	uint8_t bits_for_ip = bits_needed(num_addrs);
-	log_debug("iterator", "bits needed for %u addresses: %u", num_addrs,
+	log_debug("iterator", "bits needed for %lu addresses: %hhu", num_addrs,
 		  bits_for_ip);
 	uint8_t bits_for_port = bits_needed(num_ports);
-	log_debug("iterator", "bits needed for %u ports: %u", num_ports,
+	log_debug("iterator", "bits needed for %u ports: %hhu", num_ports,
 		  bits_for_port);
 	uint64_t group_min_size = ((uint64_t)1)
 				  << (bits_for_ip + bits_for_port);
-	log_debug("iterator", "minimum elements to iterate over: %llu",
+	log_debug("iterator", "minimum elements to iterate over: %lu",
 		  group_min_size);
 	iterator_t *it = xmalloc(sizeof(struct iterator));
 	const cyclic_group_t *group = get_group(group_min_size);
+	log_debug("cyclic_group", "prime: %lu; ", zsend.max_index);
 	if (num_addrs > (1LL << 32)) {
 		zsend.max_index = 0xFFFFFFFF;
 	} else {
@@ -94,7 +95,7 @@ iterator_t *iterator_init(uint8_t num_threads, uint16_t shard,
 	it->thread_shards = xcalloc(num_threads, sizeof(shard_t));
 	it->complete = xcalloc(it->num_threads, sizeof(uint8_t));
 	pthread_mutex_init(&it->mutex, NULL);
-	log_debug("iterator", "max targets is %u", zsend.max_targets);
+	log_debug("iterator", "max targets is %lu", zsend.max_targets);
 	for (uint8_t i = 0; i < num_threads; ++i) {
 		shard_init(&it->thread_shards[i], shard, num_shards, i,
 			   num_threads, zsend.max_targets, bits_for_port,
