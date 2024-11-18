@@ -134,8 +134,7 @@ void shard_init(shard_t *shard, uint16_t shard_idx, uint16_t num_shards,
 
 	log_debug("shard_init", "shard_idx: %hu; thread_idx: %hhu; first: %lu; last: %lu",
 		  shard_idx, thread_idx, shard->params.first, shard->params.last);
-	log_debug("generator: %lu; exponent_begin: %lu; exponent_end: %lu; prime: %lu",
-		  cycle->generator, exponent_begin, exponent_end, cycle->group->prime);
+	log_debug("DebugInfo", "generator: %lu; exponent_begin: %lu; exponent_end: %lu; prime: %lu", cycle->generator, exponent_begin, exponent_end, cycle->group->prime);
 	// Clear everything
 	mpz_clear(generator_m);
 	mpz_clear(exponent_begin_m);
