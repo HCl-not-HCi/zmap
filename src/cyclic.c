@@ -90,29 +90,29 @@ static cyclic_group_t groups[] = {
      .known_primroot = 3,
      .prime_factors = {2, 83, 1277, 20261},
      .num_prime_factors = 4},
-	 {// 2^35 + 13
-     .prime = 34359738381,
+	 {// 2^35 + 53
+     .prime = 34359738421,
      .known_primroot = 2, 
-     .prime_factors = {2,5,11,577,2237},
+     .prime_factors = {2,3,5,7,81808901},
      .num_prime_factors = 5},
     {// 2^36 + 31
      .prime = 68719476767,
      .known_primroot = 5,
      .prime_factors = {2, 163, 883, 238727},
      .num_prime_factors = 4},
-	 {// 2^37 + 51
-     .prime = 137438953523,
-     .known_primroot = 2,
-     .prime_factors = {2,13,809,6534133},
-     .num_prime_factors = 4},
-	 {// 2^38 + 3
-     .prime = 274877906947,
-     .known_primroot = 2,
-     .prime_factors = {2, 3, 1777, 25781083},
+	 {// 2^37 + 9
+     .prime = 137438953481,
+     .known_primroot = 3,
+     .prime_factors = {2,5,137,953,26317},
+     .num_prime_factors = 5},
+	 {// 2^38 + 7
+     .prime = 274877906951,
+     .known_primroot = 7,
+     .prime_factors = {2, 5, 35573, 154543},
      .num_prime_factors = 4},
 	 {// 2^39 + 23
      .prime = 549755813911,
-     .known_primroot = 2,
+     .known_primroot = 3,
      .prime_factors = {2, 3, 5, 383, 47846459},
      .num_prime_factors = 5},
     {// 2^40 + 15
@@ -127,12 +127,12 @@ static cyclic_group_t groups[] = {
      .num_prime_factors = 3},
 	 {// 2^42 + 15
      .prime = 4398046511119,
-     .known_primroot = 2,
+     .known_primroot = 7,
      .prime_factors = {2,3,13,71,227,3498493},
      .num_prime_factors = 6},
 	 {// 2^43 + 29
      .prime = 8796093022237,
-     .known_primroot = 2,
+     .known_primroot = 5,
      .prime_factors = {2,3,13,71,227,3498493},
      .num_prime_factors = 6},
     {// 2^44 + 7
@@ -142,17 +142,17 @@ static cyclic_group_t groups[] = {
      .num_prime_factors = 5},
 	 {// 2^45 + 59
      .prime = 35184372088891,
-     .known_primroot = 5,
+     .known_primroot = 3,
      .prime_factors = {2, 3, 5, 19, 120739, 511243},
      .num_prime_factors = 6},
 	 {// 2^46 + 15
      .prime = 70368744177679,
-     .known_primroot = 2,
+     .known_primroot = 3,
      .prime_factors = {2,3,1947973,6020681},
      .num_prime_factors = 4},
 	 {// 2^47 + 5
      .prime = 140737488355333,
-     .known_primroot = 2,
+     .known_primroot = 6,
      .prime_factors = {2,3,11,19,331,18837001},
      .num_prime_factors = 6},
     {// 2^48 + 23
